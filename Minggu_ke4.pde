@@ -35,7 +35,7 @@ class Objek {
     pos = new PVector(width / 2, height / 2);
     vel = PVector.random2D();
     vel.mult(random(1, 3));
-    angle = PI/2; // Orientasi awal menghadap ke atas
+    angle = PI/2;
   }
   
   void update() {
@@ -52,8 +52,8 @@ class Objek {
   void display() {
     pushMatrix();
     translate(pos.x, pos.y);
-    angle = atan2(vel.y, vel.x); // Mengubah sudut rotasi berdasarkan arah gerakan
-    rotate(angle); // Rotasi berdasarkan arah gerakan
+    angle = atan2(vel.y, vel.x);
+    rotate(angle);
     imageMode(CENTER);
     image(kecoakImg, 0, 0);
     popMatrix();
